@@ -9,9 +9,9 @@ Being devastated by solving polynomials? Try this algorithm!
 
 **Feature|特点**
 
-* 1.Based on Math theorem, easy to understand. 基于数学定理，安全可靠。
+* 1.This bisection algorithm has its Limitation when function has two very close roots. 基于二分法，有时无法分出非常接近的根。
 * 2.Acceptable time complexity. 时间复杂度不算太高。
-* 3.Polymorphic structured. 贯彻Polymorphism。
+* 3.Depth First | 深度优先
 * 4.Short and Simple. KISS. (keep it short and simple)
 
 
