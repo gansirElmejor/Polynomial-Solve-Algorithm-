@@ -47,13 +47,15 @@ class Solver{
     private void recSolve(double a, double b) {
         double mean = (b + a)/2; // 求平均数
         if (Math.abs((b-a))<PRECISION) {
-            zeros.add(mean);
+            if (stup.funn(a)*stup.funn(b)<=0) {
+                zeros.add(mean);
+            }
             return;
         } else if (stup.funn(a)*stup.funn(mean) <= 0) {
             recSolve(a,mean);
-            if (stup.funn(b)*stup.funn(mean) <= 0) { //Return Stack 的时候检查下二分的另一半行不行
+            if (stup.funn(b)*stup.funn(mean) <= 0) { //Return Stack时检查下二分的另一半行不行
                 recSolve(mean,b); 
-            } 
+            }
         } else if (stup.funn(b)*stup.funn(mean) <= 0) {
             recSolve(mean,b);
             if (stup.funn(a)*stup.funn(mean) <= 0) {
